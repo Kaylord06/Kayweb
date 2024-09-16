@@ -1,0 +1,595 @@
+main {
+    width: 100%;
+    height: calc(100vh - 6rem);
+    background-color: #1a253a;
+    margin-top: 6rem;
+    background-image: url(../img/Cool-dark-and-blue.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom, center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    column-gap: 18rem;
+}
+
+
+main .main-intro h1 {
+    font-size: 5.5rem;
+    line-height: 6rem;
+} 
+
+main p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    width: 38rem
+} 
+
+main a {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    display: block;
+    background-color: var(--site-color-01);
+    padding: 0.6rem 1.5rem;
+    width: fit-content;
+} 
+
+main a:hover {
+    background-color: var(--site-color-01-hover);
+} 
+
+
+main .main-quotes {
+    padding-bottom: 8vh;
+}
+
+main .main-quotes p {
+    border-left: 0.4rem solid var(--site-color-01);
+    padding-left: 2rem;
+    margin: 4rem 0;
+} 
+
+main .main-quotes p:nth-child(2) {
+    margin-left: 8rem;
+}
+
+main .main-intro {
+    padding-bottom: 8vh;
+}
+
+
+
+
+
+
+/* category section*/
+.index-category {
+    width: 100%;
+    padding: 6rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.index-category p {
+    color: #111;
+    text-align: center;
+    padding-bottom: 4rem;
+    flex-basis: 100%;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.index-category-box {
+    width: 16rem;
+    height: 16rem;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.index-category-box:nth-child(2) {
+    background-image: url(../img/Categories/coding.jpg);
+}
+
+.index-category-box:nth-child(3) {
+    background-image: url(../img/Categories/Modeling.jpg);
+    background-position: top;
+}
+.index-category-box:nth-child(4) {
+    background-image: url(../img/Categories/Graphics\ designing.jpg);
+}
+.index-category-box:nth-child(5) {
+    background-image: url(../img/Categories/Music.jpg);
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1a253a;
+    opacity: 0.5;
+}
+
+.index-category-box .dark-overlay:hover {
+    opacity: 0;
+    transition: all ease-in-out 200ms;
+}
+
+.index-category-box h3 {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-align: center;
+    text-shadow: -2px 2px 4px #000;
+    z-index: 100;
+}
+
+
+
+
+/* About section*/
+.index-about {
+    width: 100%;
+    padding: 6rem 0;
+    background-color: #1a253a;
+}
+
+.index-about-flex {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    justify-content: center;
+}
+
+.index-about img {
+    width: 200px;
+    border-radius: 200px;
+}
+
+.index-about-text {
+    flex-basis: 30rem;
+}
+
+.index-about-text p{
+    line-height: 18px;
+    padding: 10px 0;
+}
+
+.index-about-text a {
+    font-size: 1.2rem;
+    display: block;
+    background-color: var(--site-color-01);
+    padding: 1rem 1.5rem;
+    height: fit-content;
+    width: fit-content;
+}
+
+.index-about-text a:hover {
+    background-color: var(--site-color-01-hover);
+} 
+
+.index-about-skill {
+    flex-basis: 25rem;
+    
+}
+
+.index-about-skill-bar {
+    width: calc(100% - 0.6rem);
+    height: 1.5rem;
+    border: 3px solid black;
+}
+
+.index-about-skill-fill {
+    height: 100%;
+    background-color: var(--site-color-01);
+}
+
+.HTMLCSS {
+    width: 80%;
+}
+
+.Js {
+    width: 70%;
+}
+
+.Bd {
+    width: 30%;
+}
+
+.Fl {
+    width: 50%;
+}
+
+.Is {
+    width: 85%;
+}
+
+.Java {
+    width: 5%;
+}
+
+
+
+/* mobile version */
+@media only screen and (max-width: 600px) {
+
+    main {
+        align-items: flex-end;  /* Adjusts the big text from the image face */
+        height: calc(100vh - 6rem);
+    }
+
+    main .main-intro h1 {
+        font-size: 5.5rem;
+        line-height: 1.25;
+        text-align : center;
+    } 
+    
+    main p {
+        text-align: center;
+        padding: 0 2rem;
+        font-size: 1.6rem;
+        margin-top: 4vh;
+        line-height: 1.8rem;
+    } 
+    
+    main a {
+        margin: 3rem auto;
+    }
+    
+    main .main-intro {
+        padding-bottom: 5vh;
+    }
+
+    main .main-quotes {    /* This is to remove the quotes*/
+        display: none;
+    }
+
+    /* Category resizing*/
+
+    .index-category {
+        padding: 3rem 0 2rem;
+        row-gap: 1rem;
+    }
+    
+    .index-category p {
+        padding-bottom: 2rem;
+    }
+    
+    .index-category-box {
+        width: calc(100% - 20px);
+        height: 16rem;
+    }
+
+
+    /* About resizing */
+    
+    .index-about-flex {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+    
+    .index-about-img {
+        width: 60%;
+    }
+
+    .index-about-img img {
+        width: 100%;
+    }
+    
+    .index-about-text {
+        flex-basis: 100%;
+    }
+    
+    .index-about-text h2 {
+        text-align: center;
+    }
+
+    .index-about-text p{
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+    }
+    
+    .index-about-text a {
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .index-about-skill {
+        flex-basis: 60vw;
+    }
+
+    .index-about-skill p {
+        font-size: 1.6rem;
+    }
+
+    .index-about-skill-bar {
+        margin-bottom: 0.5rem;
+    }
+
+}
+
+
+
+
+/* Second size 😐 */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+    main {
+        align-items: flex-end;  /* Adjusts the big text from the image face */
+        height: calc(100vh - 6rem);
+    }
+
+    main .main-intro h1 {
+        font-size: 5.5rem;
+        line-height: 1.25;
+        text-align : center;
+    } 
+    
+    main p {
+        text-align: center;
+        padding: 0 2rem;
+        font-size: 1.6rem;
+        margin: 4vh auto;
+        line-height: 1.8rem;
+        width: calc(100% - 4rem);
+    } 
+    
+    main a {
+        margin: 4.91rem auto;
+        padding: 0.8rem 1.92rem;
+        font-size: 1.6rem;
+    }
+    
+    main .main-intro {
+        padding-bottom: 5vh;
+    }
+
+    main .main-quotes {    /* This is to remove the quotes*/
+        display: none;
+    }
+
+    /* Category resizing*/
+    .index-category {
+        padding: 3rem 0 2rem;
+        row-gap: 1.28vh;
+    }
+    
+    .index-category p {
+        padding-bottom: 2rem;
+        font-size: 2rem;
+    }
+    
+    .index-category-box {
+        width: calc(100% - 5.12vw);
+        height: 20.4vh;
+    }
+
+    .index-category-box {
+        font-size: 1.8rem;
+    }
+
+
+    /* About resizing */
+    .index-about-flex {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+    
+    .index-about-img {
+        width: 60%;
+    }
+
+    .index-about-img img {
+        width: 100%;
+    }
+    
+    .index-about-text {
+        flex-basis: 100%;
+    }
+    
+    .index-about-text h2 {
+        text-align: center;
+        font-size: 2.1rem;
+        line-height: 2.8rem;
+    }
+
+    .index-about-text p{
+        text-align: center;
+        font-size: 1.62rem;
+        line-height: 2.1rem;
+    }
+    
+    .index-about-text a {
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .index-about-skill {
+    flex-basis: 60vw;
+    }
+
+    .index-about-skill p {
+        font-size: 1.6rem;
+    }
+
+    .index-about-skill-bar {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+/* Next size 😎🤨 */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+    main {
+        align-items: flex-end;  /* Adjusts the big text from the image face */
+        height: calc(100vh - 6rem);
+    }
+
+    main .main-intro h1 {
+        font-size: 5.5rem;
+        line-height: 1.25;
+        text-align : center;
+    } 
+    
+    main p {
+        text-align: center;
+        padding: 0 2rem;
+        font-size: 1.6rem;
+        margin: 4vh auto;
+        line-height: 1.8rem;
+        width: calc(100% - 4rem);
+    } 
+    
+    main a {
+        margin: 4.91rem auto;
+        padding: 0.8rem 1.92rem;
+        font-size: 1.6rem;
+    }
+    
+    main .main-intro {
+        padding-bottom: 5vh;
+    }
+
+    main .main-quotes {    /* This is to remove the quotes*/
+        display: none;
+    }
+
+
+
+    /* Index section */
+    .index-category {
+        row-gap: 4rem;
+        padding: 4rem;
+    }
+
+    .index-category p {
+        padding: 0;
+    }
+
+
+
+    /* About resizing */
+    .index-about-flex {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+    
+    .index-about-img {
+        width: 60%;
+    }
+
+    .index-about-img img {
+        width: 100%;
+    }
+    
+    .index-about-text {
+        flex-basis: 100%;
+    }
+    
+    .index-about-text h2 {
+        text-align: center;
+    }
+
+    .index-about-text p{
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+    }
+    
+    .index-about-text a {
+        margin: 0 auto;
+        padding: 1rem 1.5rem;
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .index-about-skill {
+        flex-basis: 60vw;
+    }
+
+    .index-about-skill p {
+        font-size: 1.6rem;
+    }
+
+    .index-about-skill-bar {
+        margin-bottom: 0.5rem;
+    }
+
+}
+
+
+
+
+/* Next size 😎🤨 */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+
+    main {
+        column-gap: 1rem;
+    }
+
+    main .main-intro h1 {
+        font-size: 5.5rem;
+        line-height: 6rem;
+    } 
+    
+    main p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        width: 38rem
+    } 
+    
+    main a {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        display: block;
+        background-color: var(--site-color-01);
+        padding: 0.6rem 1.5rem;
+        width: fit-content;
+    }
+
+    main .main-quotes {
+        padding-bottom: 2vh;
+    }
+    
+    main .main-quotes p {
+        border-left: 0.4rem solid var(--site-color-01);
+        padding-left: 2rem;
+        margin: 4rem 0;
+    } 
+    
+    main .main-quotes p:nth-child(2) {
+        margin-left: 8rem;
+    }
+    
+    main .main-intro {
+        padding-bottom: 8vh;
+    }
+
+}

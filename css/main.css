@@ -1,0 +1,640 @@
+:root {
+    --white-background: white;
+    --site-color-01: #0020d6;
+    --site-color-01-hover: #1e32a5;
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../Fonts/Roboto/Roboto-Regular.ttf);
+}
+
+body {
+    background-color: #1e1e1e;
+    height: 100%;
+}
+
+body::after{
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(../img/whatsapp_C.png) url(../img/facebook_C.png);
+}
+
+.wrapper-main {
+    width: 80rem;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 21px;
+    line-height: 28px;
+    color: white;
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.1rem;
+    line-height: 2.8rem;
+    color: white;
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 21px;
+    line-height: 28px;
+    color: white;
+    font-family: Roboto;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: white;
+    font-family: Roboto;
+}
+
+
+
+a {
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: white;
+    font-family: Roboto;
+}
+
+.header-main {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6rem;
+    background-color: var(--white-background);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.header-main-logo {
+   width: fit-content;
+   height: 80%;
+   padding-left: 4rem;
+   display: flex;
+}
+
+.header-main-logo img {
+    height: 3.5rem;
+    align-self: center;
+    margin: auto;
+}
+
+.header-main-nav {
+    height: 100%;
+    width: fit-content;
+}
+
+.header-main-nav ul {
+    list-style: none;
+    margin-left: 6rem;
+}
+
+.header-main-nav ul li {
+    display: inline;
+    float: left;
+}
+
+.header-main-nav ul li a {
+    padding: 0 1rem;
+    font-family: Roboto;
+    line-height: 6rem;
+    color: black;
+    display: block;
+}
+
+.header-main-nav ul li a:hover {
+    color: rgb(0, 119, 255);
+}
+
+.header-main-sm {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    margin-right: 3vw;
+}
+
+.header-main-sm-fb {
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../img/facebook.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-main-sm-wh {
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../img/whatsapp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-main-sm-fb:hover {
+    background-image: url(../img/facebook_C.png);
+}
+
+.header-main-sm-wh:hover {
+    background-image: url(../img/whatsapp_C.png);
+}
+
+/* Footer */
+.footer-main {
+    width: 100%;
+    padding: 6rem 0 10rem;
+    background-color: #141414;
+}
+
+.footer-main-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-testimony {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-testimony img {
+    width: 60%;
+    border-radius: 10rem;
+}
+
+.footer-testimony p {
+   text-align: center;
+   font-size: 1.2rem;
+   padding: 1.2rem 1.2rem 0;
+   line-height: 1.6rem;
+}
+
+.footer-get-in-touch {
+    padding: 0.6rem 1.2rem;
+    border: 0.2px solid white;
+    font-weight: 500;
+    margin: 2.5rem 0 4.5rem;
+    transition: all ease-in-out 200ms;
+}
+
+.footer-get-in-touch:hover {
+    border-color: var(--site-color-01);
+    color: var(--site-color-01);
+}
+
+.footer-site-map {
+    display: flex;
+   flex-basis: 100%;
+}
+
+.footer-site-map a {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    line-height: 1.6rem;
+}
+
+.footer-site-map a:hover {
+    opacity: 0.8;
+}
+
+.footer-site-map ul:nth-child(1) {
+    flex-basis: 14rem;
+    border-left: 0.4rem solid var(--site-color-01);
+    padding-left: 2rem;
+}
+
+.footer-site-map ul:nth-child(2) {
+    flex-basis: 18rem;
+}
+
+.footer-site-map ul:nth-child(3) {
+    flex-basis: 24rem;
+}
+
+.footer-site-map p {
+    text-transform: uppercase;
+}
+
+.footer-site-map ul:nth-child(4) {
+    flex-grow: 1;
+}
+
+.footer-site-map ul:nth-child(4) li {
+    clear: both;
+    float: right;
+}
+
+.burger-menu, .burger-menu-btn {
+    display: none;
+}
+
+/* mobile version */
+@media only screen and (max-width: 600px) {
+
+    .burger-menu-btn {
+        display: block; /* this reverses display none*/
+        margin-left: 1rem;
+        width: 5rem;
+        height: 5rem;
+        background-image: url(../img/icons/menu_icon.png), url(../img/icons/close_icon.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center, center left 50px;
+    }
+
+    .burger-menu {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 900;
+        background-color: #141414;
+    }
+
+    .burger-menu ul {
+        width: 100%;
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .burger-menu ul li {
+        flex-basis: 100%;
+        border-top: 2px solid black;
+    }
+
+    .burger-menu ul li:last-child {
+        border-bottom: 2px solid black;
+    }
+
+    .burger-menu ul li a {
+        display: block;
+        height: 100%;
+        font-size: 3rem;
+        padding: 3rem 0;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+
+
+    
+    .wrapper-main {
+        width: calc(100% - 4rem);     /*this is to adjust the wrapper space throughout the website */
+    }
+    
+    .header-main-logo {
+       padding-left: 2vw;  /* This is for the logo */
+       width: fit-content;
+       align-self: center;
+    }
+
+    .header-main-logo img {
+        height: 2.5rem;
+        align-self: center;
+        margin: 0 auto;
+    }
+
+    .header-main-nav {
+        display: none;  /* This removes the nav links*/
+    }
+
+    .header-main-sm {
+        margin-right: 3vw   /* Adjust the social-media icons*/
+    }
+
+
+    /**/
+    .footer-testimony {
+        display: none;
+    }
+    
+    .footer-get-in-touch {
+        margin: 0px 0 6rem;
+    }
+
+    .footer-site-map {
+        flex-wrap: wrap;
+    }
+    
+    .footer-site-map ul:nth-child(1){
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .footer-site-map ul:nth-child(1),
+    .footer-site-map ul:nth-child(2),
+    .footer-site-map ul:nth-child(3) {
+        flex-basis: 100%;
+        text-align: center;
+        padding: 0 1rem 2rem;
+    }
+
+    .footer-site-map ul:nth-child(1)  a,
+    .footer-site-map ul:nth-child(2) a,
+    .footer-site-map ul:nth-child(3) p{
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    
+    
+    .footer-site-map ul:nth-child(4) p {
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+}
+
+
+
+
+
+
+/* Second size 😐 */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+    :root {
+        --white-background: white;
+        --site-color-01: #0020d6;
+        --site-color-01-hover: #1e32a5;
+        font-size: 80%;
+    }
+
+    .burger-menu-btn {
+        display: block; /* this reverses display none*/
+        margin-left: 1rem;
+        width: 5rem;
+        height: 5rem;
+        background-image: url(../img/icons/menu_icon.png), url(../img/icons/close_icon.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center, center left 5rem;
+    }
+
+    .burger-menu {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 900;
+        background-color: #141414;
+    }
+
+    .burger-menu ul {
+        width: 100%;
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    .burger-menu ul li {
+        flex-basis: 100%;
+        border-top: 2px solid black;
+    }
+
+    .burger-menu ul li:last-child {
+        border-bottom: 2px solid black;
+    }
+
+    .burger-menu ul li a {
+        display: block;
+        height: 100%;
+        font-size: 3rem;
+        padding: 3rem 0;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+
+
+    /* Web heading*/
+    .wrapper-main {
+        width: calc(100% - 4rem);     /*this is to adjust the wrapper space throughout the website */
+    }
+
+    .header-main-logo {
+        padding-left: 2rem;  /* This is for the logo */
+        width: fit-content;
+        align-self: center;
+    }
+    
+    .header-main-logo img {
+        height: calc(100% - 2rem);
+        align-self: center;
+        margin: auto;
+    }
+
+    .header-main-nav {
+        display: none;  /* This removes the nav links*/
+    }
+
+    .header-main-sm {
+        margin-right: 2rem;    /* Adjust the social-media icons*/
+    }
+
+
+    /**/
+    .footer-testimony {
+        display: none;
+    }
+    
+    .footer-get-in-touch {
+        padding: 0.6rem 1.2rem;
+        border: 0.2rem solid white;
+        margin: 2.5rem 0 4.5rem;
+    }
+
+    .footer-site-map {
+        flex-wrap: wrap;
+    }
+
+    .footer-site-map ul li a {
+        font-size: 1.6rem;
+    }
+    
+    .footer-site-map ul:nth-child(1){
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .footer-site-map ul:nth-child(1),
+    .footer-site-map ul:nth-child(2),
+    .footer-site-map ul:nth-child(3) {
+        flex-basis: 100%;
+        text-align: center;
+        padding: 0 1rem 2rem;
+        font-size: 1.6rem;
+    }
+
+    .footer-site-map ul:nth-child(1)  a,
+    .footer-site-map ul:nth-child(2) a,
+    .footer-site-map ul:nth-child(3) p{
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    
+    
+    .footer-site-map ul:nth-child(4) p {
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .footer-site-map ul li a {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+
+/* Next size 😎🤨 */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+    :root {
+        --white-background: white;
+        --site-color-01: #0020d6;
+        --site-color-01-hover: #1e32a5;
+        font-size: 103%;
+    }
+
+
+
+
+    .wrapper-main {
+        width: calc(100% - 4rem);     /*this is to adjust the wrapper space throughout the website */
+    }
+
+    .header-main-logo {
+        padding-left: 3vw;  /* This is for the logo */
+        width: fit-content;
+        align-self: center;
+    }
+    
+    .header-main-logo img {
+        height: calc(100% - 2.8rem);
+        align-self: center;
+        margin: auto;
+    }
+
+    .header-main-nav {
+        height: 100%;
+        width: fit-content;
+    }
+    
+    .header-main-nav ul {
+        list-style: none;
+        margin-left: 3vw;
+    }
+    
+    .header-main-nav ul li {
+        display: inline;
+        float: left;
+    }
+    
+    .header-main-nav ul li a {
+        padding: 0 1rem;
+        font-family: Roboto;
+        line-height: 5rem;
+        color: black;
+        display: block;
+    }
+    
+    .header-main-sm {
+        margin-right: 3vw;    /* Adjust the social-media icons*/
+    }
+
+
+    /* Footer section */
+    .footer-testimony {
+        display: none;
+    }
+    
+    .footer-get-in-touch {
+        padding: 0.6rem 1.2rem;
+        border: 0.2rem solid white;
+        margin: 2.5rem 0 4.5rem;
+    }
+
+    .footer-site-map {
+        flex-wrap: wrap;
+    }
+
+    .footer-site-map ul li a {
+        font-size: 1.6rem;
+    }
+    
+    .footer-site-map ul:nth-child(1){
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .footer-site-map ul:nth-child(1),
+    .footer-site-map ul:nth-child(2),
+    .footer-site-map ul:nth-child(3) {
+        flex-basis: 100%;
+        text-align: center;
+        padding: 0 1rem 2rem;
+        font-size: 1.6rem;
+    }
+
+    .footer-site-map ul:nth-child(1)  a,
+    .footer-site-map ul:nth-child(2) a,
+    .footer-site-map ul:nth-child(3) p{
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    
+    
+    .footer-site-map ul:nth-child(4) p {
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    .footer-site-map ul li a {
+        font-size: 1.6rem;
+    }
+   
+}
+
+
+
+
+
+
+/* Next size 😎🤨 */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+
+    :root {
+        --white-background: white;
+        --site-color-01: #0020d6;
+        --site-color-01-hover: #1e32a5;
+        font-size: 62.5%;
+    }
+
+}
+
